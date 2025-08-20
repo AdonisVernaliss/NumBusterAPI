@@ -1,0 +1,11 @@
+{
+  "access_token": "REPLACE_ME",
+  "default_cnonce": "REPLACE_ME",
+  "user_agent": "okhttp/4.10.0",
+  "accept_encoding": "gzip, deflate, br",
+  "sign_secrets": {
+    "v6_ping": "REPLACE_IF_NEEDED",
+    "v202310_search": "REPLACE_IF_NEEDED",
+    "theoscope_v2025": "REPLACE_IF_NEEDED"
+  }
+}

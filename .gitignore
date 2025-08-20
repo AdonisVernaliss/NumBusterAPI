@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.DS_Store
+
+# Venv
+venv/
+env/
+
+# Credentials
+creds.json

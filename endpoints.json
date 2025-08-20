@@ -1,0 +1,63 @@
+{
+  "rate_delay": 0.3,
+  "sequence": [
+    "ping",
+    "search",
+    "theoscope_access",
+    "tiers_access",
+    "tiers_pricing",
+    "purchased_by_phone"
+  ],
+  "endpoints": {
+    "ping": {
+      "method": "POST",
+      "path": "/api/v6/ping",
+      "static_params": {},
+      "cnonce_required": true,
+      "sign_order": ["access_token", "timestamp", "cnonce"],
+      "post_body": "locale=en_US&platform=android&datetime=2025-08-20%2014%3A21%3A18&version=73700&fcm_token=fTsP0L_-Tnqg2rm2QDsyDI%3AAPA91bFWDkPT92qVG-i1ltUBjAi1AY7YMiXW7rszvb-7Ak-Lm4cKQUuACgVjSYAmlRciylTlx17Ui0k9JKvMMDIv6TImS2ODW88PAXQV3Mjld3ionCvltoc"
+    },
+    "search": {
+      "method": "GET",
+      "path": "/api/v202310/search/{phone}",
+      "static_params": {
+        "locale": "en",
+        "paidSearch": "0",
+        "order_by": "interesting",
+        "source": "SEARCH_HISTORY"
+      },
+      "cnonce_required": true,
+      "sign_order": ["access_token", "locale", "timestamp", "cnonce", "paidSearch", "order_by", "source"]
+    },
+    "theoscope_access": {
+      "method": "GET",
+      "path": "/api/v202501/theoscope/phone/feature/access/get",
+      "phone_param": "phone",
+      "static_params": {},
+      "cnonce_required": true,
+      "sign_order": ["access_token", "cnonce", "phone", "timestamp"]
+    },
+    "tiers_access": {
+      "method": "GET",
+      "path": "/api/v202501/theoscope/tiers/access/get",
+      "static_params": { "locale": "en_US" },
+      "cnonce_required": true,
+      "sign_order": ["access_token", "cnonce", "locale", "timestamp"]
+    },
+    "tiers_pricing": {
+      "method": "GET",
+      "path": "/api/v202411/theoscope/tiers/pricing/get",
+      "static_params": {},
+      "cnonce_required": true,
+      "sign_order": ["access_token", "cnonce", "timestamp"]
+    },
+    "purchased_by_phone": {
+      "method": "GET",
+      "path": "/api/v202411/theoscope/purchased/by/phone/get",
+      "phone_param": "phoneNumber",
+      "static_params": {},
+      "cnonce_required": true,
+      "sign_order": ["access_token", "cnonce", "timestamp", "phoneNumber"]
+    }
+  }
+}

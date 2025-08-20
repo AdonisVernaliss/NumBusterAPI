@@ -210,7 +210,7 @@ def format_minimal_output(res: List[Dict[str, Any]]):
             items["Country"] = r.get("country_code")
         if r.get("endpoint") == "purchased_by_phone":
             items["Purchases"] = r.get("purchases_count", 0)
-    for k in ["Name", "Carrier", "Region", "Contacts", "SeeMore", "Theo_Own", "Theo_Other", "Country", "Purchases"]:
+    for k in ["Name", "Carrier", "Region", "Contacts"]:
         if k in items:
             print(f"{k}: {items[k]}")
 

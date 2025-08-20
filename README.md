@@ -23,14 +23,7 @@ Sends app-like requests to NumBuster API endpoints.
 git clone https://github.com/AdonisVernaliss/NumBusterAPI.git
 cd NumBusterAPI
 
-# 2. Create venv
-python3 -m venv venv
-source venv/bin/activate    # Windows: venv\Scripts\activate
-
-# 3. Install deps
-pip install -r requirements.txt
-
-# 4. Create creds.json
+# 2. Create creds.json
 cp creds.example.json creds.json
 ```
 `cred.py` is git-ignored and must not be committed.
